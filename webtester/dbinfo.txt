@@ -1,0 +1,14 @@
+oracle
+driver=oracle.jdbc.OracleDriver
+url=jdbc:oracle:thin:@10.11.83.121:1521:xe
+user=hr
+pw=hr
+
+
+    
+mariadb    
+_driver=org.mariadb.jdbc.Driver
+_url=jdbc:mariadb://jeongps.com:3306/japan_kakiha0218
+_user=kakiha0218
+_pw=pC2ajqJhXpJnZvMB
+        

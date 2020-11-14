@@ -1,0 +1,49 @@
+<%@page import="service.BookService"%>
+<%@page import="vo.BookVO"%>
+<%@page import="java.util.List"%>
+<%@page import="service.BookServiceImpl"%>
+<%@page import="dao.BookDAO_Mariadb"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My WebApplication ...</title>
+
+<link rel="stylesheet" href="./css/my.css">
+
+<%@ taglib prefix="c" uri = "http://java.sun.com/jsp/jstl/core" %>
+
+</head>
+
+<body>
+<h1> Book List</h1>
+
+<table class="tableb">
+  <tr><th>BookNo</th><th>Title</th><th>Publisher</th><th>Price</th><th>delete</th></tr>
+  
+ 
+ <c:forEach var="data" items="${bookList}">
+
+  <tr>
+     <td>${data.bookno}</td> 
+     <td>${data.title}</td> 
+     <td>${data.publisher}</td> 
+     <td>${data.price}</td> 
+     <td> <form action="deleteBook.do" method="post"> <input type="checkbox" name="delete"> </form> </td>
+  </tr>
+
+</c:forEach>
+
+
+</table>
+
+	<br>
+	<div align="center"><a href="book.jsp"> 도서 등록 </a></div>
+	
+
+</body>
+</html>
