@@ -14,12 +14,14 @@
 	       <li> <a href="chart1.jsp"> chart </a> </li>
 	       <li> <a href="#"> About </a> </li>
 	       <li> <a href="#"> Map </a> </li>
+	       
 	        <c:if test="${empty login}">
 			   <li> <a href="login.jsp"> LogIn </a></li><br>
 		   </c:if>
 			
 			<c:if test="${!empty login }">
-			   <li> <a href="logout.do"> LogOut </a></li><br>
+			   <li> <a href="logout.do"> LogOut </a> (${login.name}) </li><br>
+			   
 			</c:if>
 	    </ul>
 	</nav>

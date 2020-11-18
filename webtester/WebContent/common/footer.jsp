@@ -1,1 +1,1 @@
-	<footer> Footer Contents</footer>
+	<footer> BOOK STORE WEB APPLICATION </footer>

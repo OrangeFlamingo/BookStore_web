@@ -17,6 +17,8 @@ public class JDBCUtil {
 		
 		Properties p = new Properties();
 		try {
+			
+			// 상대경로가 아닌 절대경로로 하는 것이 안전 -> 서버의 경우 서버 내의 절대 경로 사용하기
 			p.load(new FileInputStream("D:/lib/dbinfo.txt/"));
 			
 			String driver = p.getProperty("_driver");

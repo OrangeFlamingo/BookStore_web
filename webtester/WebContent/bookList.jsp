@@ -23,10 +23,15 @@
 	}
 </script>
 
+<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/my.css">
 
 </head>
 
 <body>
+
+<%@ include file="common/header.jsp"%>
+
 <h1> Book List</h1>
 
 <hr>
@@ -77,6 +82,7 @@
 	<br>
 	<div align="center"><a href="book.jsp"> 도서 등록</a></div>
 	
+<%@ include file="common/footer.jsp" %>
 
 </body>
 </html>
