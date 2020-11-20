@@ -43,7 +43,7 @@ public class BookDAO_Mariadb {
 	}
 	public void bookAdd(BookVO vo) {
 		String sql =
-		"insert into book (title,publisher,price) values (?,?,?)";
+		"insert into book (title,publisher,price,image) values (?,?,?,?)";
 		
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -57,6 +57,7 @@ public class BookDAO_Mariadb {
 			ps.setString(1, vo.getTitle());
 			ps.setString(2, vo.getPublisher());
 			ps.setInt(3, vo.getPrice());
+			ps.setString(4, vo.getImage());
 			
 			//실행
 			//ps.executeQuery();
@@ -166,9 +167,10 @@ public class BookDAO_Mariadb {
 		}
 		return list;
 	}
+	
 	public BookVO getBook(int bookno) {
-		String sql ="select * fro"
-				+ "m book where bookno = ? ";
+		String sql ="select * from"
+				+ " book where bookno = ? ";
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -185,6 +187,7 @@ public class BookDAO_Mariadb {
 				vo.setPrice(rs.getInt("price"));
 				vo.setTitle(rs.getString("title"));
 				vo.setPublisher(rs.getString("publisher"));
+				vo.setImage(rs.getString("image"));
 			}
 		}catch (Exception e) {
 		     e.printStackTrace();	

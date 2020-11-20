@@ -5,14 +5,17 @@ public class BookVO {
 	private String title; // VARCHAR(40),
 	private String publisher; // VARCHAR(40),
 	private int price; // int(8)
+	private String image;
 	
 	public BookVO() {	}
 
-	public BookVO(int bookno, String title, String publisher, int price) {
+	public BookVO(int bookno, String title, String publisher, int price, String image) {
+		super();
 		this.bookno = bookno;
 		this.title = title;
 		this.publisher = publisher;
 		this.price = price;
+		this.image = image;
 	}
 
 	public int getBookno() {
@@ -47,10 +50,22 @@ public class BookVO {
 		this.price = price;
 	}
 
+	public String getImage() {
+		return image;
+	}
+	
+	public void setImage(String image) {
+		this.image = image;
+		
+	}
+	
+	
 	@Override
 	public String toString() {
-		return "BookVO [bookno=" + bookno + ", title=" + title + ", publisher=" + publisher + ", price=" + price + "]";
+		return "BookVO [bookno=" + bookno + ", title=" + title + ", publisher=" + publisher + ", price=" + price + ", image name=" + image + " ]";
 	}
+
+	
 
 	
 }
